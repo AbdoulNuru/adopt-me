@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
+    "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,7 +21,12 @@
   },
   "homepage": "https://github.com/AbdoulNuru/adopt-me#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-import": "^2.20.2",
@@ -31,6 +37,7 @@
     "prettier": "^2.0.2"
   },
   "dependencies": {
+    "@babel/runtime": "^7.9.2",
     "@frontendmasters/pet": "^1.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
